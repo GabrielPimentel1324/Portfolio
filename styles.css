@@ -1,0 +1,305 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.AB{
+    color: #551fbd;
+}
+/* Estilos do cabeçalho */
+header {
+    background-color: #551fbd;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    height: 3rem;
+}
+
+/*Estilos modo escuro*/
+input[type="checkbox"] {
+    -webkit-apparence: none;
+    visibility: hidden;
+    display: none;
+    position: right;
+}
+
+.check {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.4s;
+}
+
+input[type="checkbox"]:checked~.check {
+    background-color: #000000;
+    box-shadow: 0 0 0 20000px #1d1d1d;
+}
+
+.check::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: #ffffff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input[type="checkbox"]:checked~.check::before {
+    background-color: #ffffff;
+    transform: translateX(-50px);
+}
+
+.check::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: #ffffff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transition: 0.4s;
+    transform: translateX(-50px);
+    
+}
+
+input[type="checkbox"]:checked~.check::after {
+    background-color: #ffffff;
+    transform: translateX(0px);
+    
+
+}
+
+/*fim*/
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #000000
+}
+
+p {
+    color: #000000;
+}
+
+.foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 35%;
+}
+.pato{
+    width: 90px;
+    height: 90px;
+}
+/* Estilos do conteúdo */
+.container {
+    margin: 30px;
+    background-color: #b7aace;
+}
+
+/*Estilos do corpo*/
+body {
+    background-color: #e7e7e7;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #551fbd;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+}
+
+/* \estilos redes sociais*/
+.social {
+    width: 100%;
+    float: left;
+    display: flex;
+    margin: auto;
+}
+
+.social ul {
+    width: auto;
+    margin: auto;
+    float: left;
+    display: block;
+}
+
+.social ul li {
+    position: relative;
+    background: #555555;
+    list-style: none;
+    float: left;
+    margin: 5px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 3px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.social ul li a {
+    width: 50px;
+    height: 50px;
+    line-height: 53px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: .4s;
+}
+
+.social ul li::before {
+    transition: 0.4s;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 90%;
+    left: 0;
+    background: #1ee9f0;
+    z-index: -1;
+    transform: scale(1);
+    transition: .4s;
+}
+
+.social ul li:hover::before {
+    transition: 0.4s;
+    top: 0%;
+}
+
+.social ul li a:hover {
+    color: #555555;
+}
+
+.insta {
+    width: 45px;
+    height: 45px;
+}
+
+.zap {
+    width: 45px;
+    height: 45px;
+}
+
+.link {
+    width: 45px;
+    height: 45px;
+}
+
+.git {
+    width: 45px;
+    height: 45px;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 768px) {
+    header {
+        height: 100px;
+        text-align: center;
+    }
+    .foto {
+        display: block;
+        margin: 10px auto;
+    }
+    .comeco {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    ul {
+        position: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        position: fixed;
+    }
+    header {
+        height: 100px;
+    }
+    ul{
+        position: absolute;
+    }
+}
+@media screen and (max-width: 270px) {
+    header {
+        height: 150px;
+        text-align: center;
+    }
+    ul {
+        position: absolute;
+    }
+}
+/*bolinha*/
+.bolinha {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .bolinha div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .bolinha div:nth-child(1) {
+    left: 8px;
+    animation: bolinha1 0.6s infinite;
+  }
+  .bolinha div:nth-child(2) {
+    left: 8px;
+    animation: bolinha2 0.6s infinite;
+  }
+  .bolinha div:nth-child(3) {
+    left: 32px;
+    animation: bolinha2 0.6s infinite;
+  }
+  .bolinha div:nth-child(4) {
+    left: 56px;
+    animation: bolinha3 0.6s infinite;
+  }
+  @keyframes bolinha1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes bolinha3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes bolinha2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
